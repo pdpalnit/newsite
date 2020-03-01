@@ -1,0 +1,27 @@
+<head>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+
+<body>
+
+ <nav>
+ {% extends 'main/header.html' %}
+
+ {% block content %}
+ </nav>
+
+{% for tut in tutorials %}
+	<p>{{tut.tutorial_title}}</p>
+	<p>{{tut.tutorial_content}}</p>
+	<p>{{tut.tutorial_published}}</p>
+	<br></br>
+{% endfor %}
+
+{% endblock %}
+
+</body>

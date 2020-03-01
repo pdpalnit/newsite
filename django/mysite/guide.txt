@@ -1,0 +1,37 @@
+1) Create project: in cmd in type django-admin startproject project_name (mysite)
+This will create mysite folder
+
+2) Copy the folder to the desired location
+3) cd to desired directory in cmd
+
+In the folder we will have one folder(same as project_name(mysite in this case)), one data base(db.sqlite3), and manage.py file.
+mysite folder has more files in it and this is our primary app. Now we want to create main folder.
+
+4) type in cmd >python manage.py startapp main
+This will create the app folder. In this folder we have .py files and two folders(mainly one is migration that we will need soon) including views.py,
+models.py and many more. But we need urls.py file in this folder. We can have this by copying from mysite folder.
+
+5) copy urls.py from mysite to main folder
+
+6) Check if server is running by typing in cmd>python manage.py runserver
+This will create tab in chrome (or whatever) and will show that server is running
+
+7) Now we have to make changes in urls.py file from mysite first. We have to always make sure that the pathspatterns matches user input.
+(For example if user do not type anything but just website home page we have to point to our main app to show webpage only.)
+
+8) Then we have to make sure that usrls.py file from the main folder then point to views.homepage function to show homepage
+
+9) Then we also have to create this homepage function in views files.
+
+10) Now, we have to write our model in model.py file.
+
+11) Whatever changes we make in model.py file we have reflect that in our data base.
+
+12) For this first we have to install our main app (which didn't come as default, we made it using manage.py). To do this go to mysite->setting.py file.
+In that file write 'main.apps.MainConfig' into the INSTALLED_APP variable.
+
+13) Then type in cmd>python manage.py makemigrations. This will make the changes.
+
+14) Then we have to actually make migrations. To do this type in cmd>python manage.py migrate
+
+15) 
